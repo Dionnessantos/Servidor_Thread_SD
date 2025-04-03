@@ -18,6 +18,7 @@ import javax.swing.JTextField;
  */
 public class ServidorFormChat extends javax.swing.JFrame {
     
+    private GerenciarConexao T;
     private static Vector  clientes;
     private Socket conexao;
     Thread t;
@@ -234,7 +235,15 @@ public class ServidorFormChat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPararActionPerformed
-        System.exit(0);         // TODO add your handling code here:
+           if (T != null) {
+          
+            T = null;
+        }
+        clientes.clear();
+        ButtonIniciar.setEnabled(true);
+        t.start();
+        ButtonParar.setEnabled(false); 
+        System.out.println("Conexão encerrada!!!");
     }//GEN-LAST:event_ButtonPararActionPerformed
 
     private void txtNumeroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroClienteActionPerformed
