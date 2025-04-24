@@ -98,6 +98,12 @@ public class ServidorFormChat extends javax.swing.JFrame {
 
         jLabel2.setText("Porta:");
 
+        campoPorta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoPortaActionPerformed(evt);
+            }
+        });
+
         ButtonIniciar.setText("Iniciar");
         ButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,6 +270,10 @@ public class ServidorFormChat extends javax.swing.JFrame {
         palavras = texto.split(";");
         ma.escreverArq(texto, "ListaPalavras");        // TODO add your handling code here:
     }//GEN-LAST:event_ButtonSalvarPalavrasActionPerformed
+
+    private void campoPortaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPortaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPortaActionPerformed
 
     /**
      * @param args the command line arguments
