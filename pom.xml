@@ -10,4 +10,5 @@
         <maven.compiler.release>17</maven.compiler.release>
         <exec.mainClass>com.sd.prjservidorchat_thread.Prjservidorchat_thread</exec.mainClass>
     </properties>
+    <name>PrjServidorChat_Thread</name>
 </project>
